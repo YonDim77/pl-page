@@ -7,7 +7,7 @@ I create my navigation bar using Bootstrap. At first I create a nav.html file wh
 For the list of products I used a javascript array of objects and made 2 lists. One for tv products and one for laptop products. I also made some JS functions
 for displaying, filtering and sorting the products. The purpose of my load button is as expected but with little difference. When there are not products to be shown the load button is still active but with the function to load products from the very beginning. I did it because I think is more useful like that. My content section loads 4 items/tiles by default and load button adds 4 items more.
 
-I didn't undestand how we have to make our PLP page. I create 2 html files. One of them is index.html(tv products), which loads itself first ofcourse. Other option was to make one .html file and his content will switch depend on the category.
+I didn't undestand how we have to make our PLP page. I create 2 html files. One of them is index.html(tv products), which loads itself first ofcourse. The other one is for laptops. Other option was to make one .html file and his content will switch depend on the category.
 
 The page has 3 CSS breakpoints for responsive design. There are 4 columns(grid-template-columns: 25% 25% 25% 25%) for the products and break points are: 
 - max-width: 1200px, columns become 3(grid-template-columns: 32.66% 32.66% 32.66%)
