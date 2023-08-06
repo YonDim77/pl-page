@@ -1,0 +1,186 @@
+
+.filter{
+    padding: 0px;
+    display: grid;
+}
+
+.filter .item select,
+.filter .item button {
+    width: 90%;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    border-left: 1px solid #ddd;
+    outline: none;
+}
+.filter .item label{
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    color: red;
+}
+.filter .item.submit button{
+    background-color: #AA82ED;
+    color: #fff;
+}
+
+#list {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    #list {
+        display: grid;
+        grid-template-columns: 32.66% 32.66% 32.66%;  
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #list {
+        display: grid;
+        grid-template-columns: 50% 50%;  
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #list {
+        display: grid;
+        grid-template-columns: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    #list .item {
+	    width: 100%;
+    }
+}
+
+#list .item {
+    margin-top: 50px;
+	width: 90%;
+}
+
+@media screen and (max-width: 600px) {
+    #list .item {
+	    width: 100%;
+    }
+}
+
+div.item:hover {
+  
+}
+
+#list .item img {
+  width: 100%;
+  height: auto;
+}
+
+#list .item .title,
+#list .item .desc {
+  text-align: center;
+}
+
+#list .item .price  {
+  color: red;
+  text-align: center;
+}
+
+.checked {
+  color: orange;
+}
+
+#list .item button {
+  background-color: red;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #list .item button {
+        margin: 0 auto;
+        margin-top: 20px;
+        display: block;
+        width: 80%;
+    }    
+}
+
+.countResults {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .countResults {
+    grid-template-columns: 50% 50%;    
+  }
+}
+
+.countResults .sort select,
+.countResults .sort button{
+    width: 90%;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    border-left: 1px solid #ddd;
+    outline: none;
+}
+
+#btnLoad {
+    margin: 20px;
+    padding: 5px;
+    border: none;
+    background-color: #AA82ED;
+    color: #fff;
+    border-left: 1px solid #ddd;
+    outline: none;
+    width: 20%;
+}
+
+@media screen and (max-width: 600px) {
+    #btnLoad {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        display: block;
+        width: 100%;
+    }    
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 20px;
+    background-color: #e0e0eb;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background-color: #e0e0eb;
+        padding: 20px;
+    }
+}
+
+.footer .column {
+    text-align: left;
+}
+
+.footer .column a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.footer .column a:hover {
+  text-decoration: underline;
+}
