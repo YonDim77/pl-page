@@ -5,7 +5,7 @@ It was pleasure to me to take part in this task.
 I create my navigation bar using Bootstrap. At first I create a nav.html file which contains only the menu. And then I tried to include this file as part of the page but it didn't work. I used to do the same thing in the past but all my files were .php and there was not such problem. I also use Bootstrap grid for creating filter and product sections.
 
 For the list of products I used a javascript array of objects and made 2 lists. One for tv products and one for laptop products. I also made some JS functions
-for displaying(showProduct(productFilter)), filtering(listTvProducts.filter(item =>...})) and sorting(productFilter.sort(compareAsc)) the products. The purpose of my load button is as expected but with little difference. When there are not products to be shown the load button is still active but with the function to load products from the very beginning. I did it because I think is more useful like that. My content section loads 4 items/tiles by default and load button adds 4 items more.
+for displaying(showProduct(productFilter)), filtering(listTvProducts.filter(item =>...})) and sorting(productFilter.sort(compareAsc) and etc.) the products. The purpose of my load button is as expected but with little difference. When there are not products to be shown the load button is still active but with the function to load products from the very beginning. I did it because I think is more useful like that. My content section loads 4 items/tiles by default and load button adds 4 items more.
 
 I didn't undestand how we have to make our PLP page. I create 2 html files. One of them is index.html(tv products), which loads itself first ofcourse. The other one(plpLaptop.html) is for laptops. Other option that I thought about was to make one .html file and his content will switch depend on the category.
 
@@ -13,6 +13,8 @@ The page has 3 CSS breakpoints for responsive design. There are 4 columns(grid-t
 - max-width: 1200px, columns become 3(grid-template-columns: 32.66% 32.66% 32.66%)
 - max-width: 992px, columns become 2(grid-template-columns: 50% 50%)
 - max-width: 600px, there is 1 column(grid-template-columns: 100%)
+
+Discount price I didn't make it as I wished. The old price had to be shown as cross out(text-decoration: line-through) but unfortunately i did not succeed to do it.
 
 
 
