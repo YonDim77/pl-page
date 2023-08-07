@@ -1,9 +1,11 @@
 
 
-	let list = document.getElementById('list');
-    let filter = document.querySelector('.filter');
-	let sort = document.querySelector('.sort');
-    let count = document.getElementById('count');
+
+
+        let list = document.getElementById('list');
+        let filter = document.querySelector('.filter');
+        let sort = document.querySelector('.sort');
+        let count = document.getElementById('count');
 	
 	let listTvProducts = [
 		{
@@ -140,7 +142,7 @@
 			id: 11,
 			name: 'SONY KD-55W800P',
 			price: 850,
-			discountPrice: '',
+			discountPrice: 789,
 			starCount: 4,
 			image: 'tv7.jpg',
 			desc: {	
@@ -168,25 +170,75 @@
 	
 	let productFilter = listTvProducts;
 	let saveProductFilterLength;
-	//let sliced = productFilter;
-    //showProduct(productFilter);
 	
 	function compareAsc( a, b ) {
-		if ( a.price < b.price ){
-			return -1;
+		if(a.discountPrice == '' && b.discountPrice == '') {
+			if ( a.price < b.price ){
+				return -1;
+			}
+			if ( a.price > b.price ){
+				return 1;
+			}
 		}
-		if ( a.price > b.price ){
-			return 1;
+		if(a.discountPrice == '' && b.discountPrice != '') {
+			if ( a.price < b.discountPrice ){
+				return -1;
+			}
+			if ( a.price > b.discountPrice ){
+				return 1;
+			}
+		}
+		if(a.discountPrice != '' && b.discountPrice == '') {
+			if ( a.discountPrice < b.price ){
+				return -1;
+			}
+			if ( a.discountPrice > b.price ){
+				return 1;
+			}			
+		}
+		if(a.discountPrice != '' && b.discountPrice != '') {
+			if ( a.discountPrice < b.discountPrice ){
+				return -1;
+			}
+			if ( a.discountPrice > b.discountPrice ){
+				return 1;
+			}			
 		}
 		return 0;
 	}
 	
 	function compareDesc( a, b ) {
-		if ( b.price < a.price ){
-			return -1;
+		if(a.discountPrice == '' && b.discountPrice == '') {
+			if ( b.price < a.price ){
+				return -1;
+			}
+			if ( b.price > a.price ){
+				return 1;
+			}
 		}
-		if ( b.price > a.price ){
-			return 1;
+		else if(a.discountPrice == '' && b.discountPrice != '') {
+			if ( b.discountPrice < a.price ){
+				return -1;
+			}
+			if ( b.discountPrice > a.price ){
+				return 1;
+			}
+		}
+		else if(a.discountPrice != '' && b.discountPrice == '') {
+			if ( b.price < a.discountPrice ){
+				return -1;
+			}
+			if ( b.price > a.discountPrice ){
+				return 1;
+			}
+		}
+		else {
+			if ( b.discountPrice < a.discountPrice ){
+				return -1;
+			}
+			if ( b.discountPrice > a.discountPrice ){
+				return 1;
+			}			
 		}
 		return 0;
 	}
@@ -286,10 +338,18 @@
 			
             // create price
             let newPrice = document.createElement('div');
+			let oldPrice = document.createElement("SPAN");
             newPrice.classList.add('price');
+			oldPrice.classList.add('price');
+			
             if(item.discountPrice != '')
-                newPrice.innerText = item.price + ' lv -> new price ' + item.discountPrice +' lv';
-            else
+			{
+                newPrice.innerText = ' lv -> new price ' + item.discountPrice +' lv';
+				oldPrice.innerText = item.price;
+				oldPrice.style.textDecoration = "line-through";
+				newPrice.insertBefore(oldPrice, newPrice.firstChild);
+			}
+			else
                 newPrice.innerText = item.price.toLocaleString() + ' lv';
             newItem.appendChild(newPrice);
 			
@@ -384,11 +444,13 @@
             }
             if(valueFilter.brand.value == '' && valueFilter.screenSize.value == '')
             {
-                productFilter = listTvProducts;
+                productFilter = listTvProducts;				
             }
 
             return true;
         });
 		displayFirstFour();
     });
+	
+   
 	
