@@ -277,7 +277,7 @@
             // create price
             let newPrice = document.createElement('div');
             newPrice.classList.add('price');
-            newPrice.innerText = item.price.toLocaleString() + ' lv';
+            newPrice.innerText = item.price + ' lv';
             newItem.appendChild(newPrice);
 			
 			// create rating stars
