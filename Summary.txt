@@ -14,7 +14,7 @@ The page has 3 CSS breakpoints for responsive design. There are 4 columns(grid-t
 - max-width: 992px, columns become 2(grid-template-columns: 50% 50%)
 - max-width: 600px, there is 1 column(grid-template-columns: 100%)
 
-Discount price I didn't make it as I wished. The old price had to be shown as cross out(text-decoration: line-through) but unfortunately i did not succeed to do it.
+Discount price I left for the end of the task but unfortunately I have run out of time and didn't make it as I wished. The old price had to be shown as cross out(text-decoration: line-through).
 
 
 
