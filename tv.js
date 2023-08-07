@@ -344,13 +344,13 @@
 			
             if(item.discountPrice != '')
 			{
-                newPrice.innerText = ' lv -> new price ' + item.discountPrice +' lv';
+                newPrice.innerText = ' lv -> new price ' + item.discountPrice + ' lv';
 				oldPrice.innerText = item.price;
 				oldPrice.style.textDecoration = "line-through";
 				newPrice.insertBefore(oldPrice, newPrice.firstChild);
 			}
 			else
-                newPrice.innerText = item.price.toLocaleString() + ' lv';
+                newPrice.innerText = item.price + ' lv';
             newItem.appendChild(newPrice);
 			
 			// create rating stars
