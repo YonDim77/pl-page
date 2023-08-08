@@ -181,6 +181,10 @@ div.item:hover {
     text-decoration: none;
 }
 
+.footer .column a:visited {
+  color: black;
+}
+
 .footer .column a:hover {
   text-decoration: underline;
 }
